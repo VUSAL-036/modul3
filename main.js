@@ -3,18 +3,19 @@ const url = 'https://api.exchanherate.host/latest';
 let currentCurr = 'RUB',exchangeCurr = 'USD'
 let currVal = 1;
 
-const inpleft = document.querySelector('.left-input');
-const  inpRight = document.querySelector('.right-input');
+const inpleft = document.querySelector('.i1');
+const  inpRight = document.querySelector('.i12');
 
-const currLeft = document.querySelector('.change1');
-const currRight = document.querySelector('.change2');
+const currLeft = document.querySelector('.yoruldum1');
+const currRight = document.querySelector('.yoruldum2');
 
-const btnsLeft = document.querySelector('#btn1').children;
+const btnsLeft = document.querySelector('.duymeb').children;
 for(let i=0; i<btnsLeft.length; i++) {
     btnsLeft[i].addEventListener('click',changeExchangeCurrency);
 }
 
-const btnsRight = document.querySelector('#btn2').children;
+
+const btnsRight = document.querySelector('.duymeb2').children;
 for(let i=0; i<btnsRight.length; i++) {
     btnsRight[i].addEventListener(click),changeExchangeCurrency;
 }
@@ -51,8 +52,8 @@ async function loadCurrency(a,b) {
     }
 
     function changeExchangeCurrency(e) {
-        const btn =.target;
-        for(let i=0; i<btnsRight.length; i++)) {
+        const btn =e.target;
+        for(let i=0; i<btnsRight.length; i++){
             btnsRight[i].classList.remove('curr-active');
         }
         btn.classList.add('curr-active');
@@ -64,26 +65,26 @@ async function loadCurrency(a,b) {
         if(e.target.value === '') {
             e.target.value = 0;
         }
-        e.target.value = e.target.value.replaceAll(','',);
+        e.target.value = e.target.value.replaceAll(',','.');
         getdata(currentCurr, exchangeCurr, inpleft, inpRight);
-    })
+    });
 
     inpRight.addEventListener('input', (e) => {
         if(e.target.value === '') {
             e.target.value === 0;
         }
-        e.target.value.replaceAll(','',);
-        getdata(exchangeCurr, currentCurr, inpRight, inpleft);
-    })
+        e.target.value=e.target.value.replaceAll(',','.');
+        getdata(exchangeCurr, currentCurr, inpLeft, inpRight);
+    });
 
     inpleft.addEventListener('keydown', acceptNumber);
     inpRight.addEventListener('keydown', acceptNumber);
 
     function acceptNumber(e) {
         if( !( (e.key === 'Backspace')|| (e.key === 'Delete') ||
-        ))
-    }
-
+        (('0'<=e.key) && (e.key<='9'))||
+        (e.key === '.') || (e.key ===',')
+        )){
     e.preventDefault();
 }
 if((e.key === ',') || (e.key === ',')) {
@@ -91,6 +92,6 @@ if((e.key === ',') || (e.key === ',')) {
         e.preventDefault();
     }
 }
+    }
 
-
-getdata{currentCurr, exchangeCurr, inpleft,inpRight};
+getData{currentCurr, exchangeCurr, inpleft,inpRight};
