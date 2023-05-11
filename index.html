@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYIHE3</title>
     <link rel="stylesheet" href="main.css">
-    <title>Document</title>
 </head>
+
 <body>
-    <div class="umumi">
-        <div class="basliq">
-            <div class="bank"></div>
-            <div class="menu">
-                <p class="bank1">БАНК</p>
-                <p class="biznes">БИЗНЕС</p>
-                <p class="invest">ИНВЕСТИЦИИ</p>
-                <p class="strax">СТРАХОВАНИЕ</p>
-                <p class="mobayl">МОБАЙЛ</p>
-                <p class="putes">ПУТЕШЕСТВИЯ</p>
-                <p class="razvle">РАЗВЛЕЧЕНИЯ</p>
-            </div>
-            <button class="voyti">ВОЙТИ</button>
+    <header class="header">
+        <div class="bank img">
+            <img class="img" src="./img/Asset 1@3x 1.svg">
         </div>
-        <div class="kh">
-            <h2 class="h2">Конвертер валют онлайн</h2>
-            <div class="cay40">
-                <div class="coffe20">
-                    <h3 class="h41">У меня есть</h3>
-                    <div class="duymeb">
-                        <button class="br">RUB</button>
-                        <button class="bu">USD</button>
-                        <button class="be">EUR</button>
-                        <button class="bg">GBD</button>
-                    </div>
-                    <div class="indiv">
-                        <input class="i1" name="i1" type="i1">
-                        <p class="yoruldum1"></p>
-                    </div>
+        <nav class="h-nav">
+            <ul class="ul">
+                <li class="nav-li">BANK</li>
+                <li class="nav-li">BUSINESS</li>
+                <li class="nav-li">INVESTMENT</li>
+                <li class="nav-li">STRACHOVANIA</li>
+                <li class="nav-li">MOBILE</li>
+                <li class="nav-li">PUTESESTIVITY</li>
+                <li class="nav-li">PAZVLECENYA</li>
+            </ul>
+        </nav>
+        <div class="b-btn">
+            <button class="b-btn">ENTER</button>
+        </div>
+    </header>
+    <main>
+        <h1>Currency converter online</h1>
+        <div class="dd">
+            <div>
+                <p>I have</p>
+                <div class="btns1">
+                    <button class="b b-active">RUB</button>
+                    <button class="b">USD</button>
+                    <button class="b">EUR</button>
+                    <button class="b">GBP</button>
                 </div>
-                <div class="cay20">
-                    <h3 class="h42">Хочу приобрести</h3>
-                    <div class="duymeb1">
-                        <button class="br1">RUB</button>
-                        <button class="bu1">USD</button>
-                        <button class="be1">EUR</button>
-                        <button class="bg1">GBD</button>
-                    </div>
-                    <div class="indiv1">
-                        <input class="i12" name="i12" type="i12">
-                        <p class="yoruldum1"></p>
-                    </div>
+                <div class="ii">
+                    <input id="sol-i" type="text">
+                    <p class="pp sol-p">1 RUB = 0.0135 USD</p>
                 </div>
             </div>
+            <div class="dd2">
+                <p>I want to buy</p>
+                <div class="btns2">
+                    <button class="b">RUB</button>
+                    <button class="b b-active">USD</button>
+                    <button class="b">EUR</button>
+                    <button class="b">GBP</button>
+                </div>
+                <div class="ii">
+                    <input id="sag-i" type="text">
+                    <p class="pp sag-p">1 USD = 73.8896 RUB</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+    <script src="main.js"></script>
 </body>
+
 </html>
